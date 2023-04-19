@@ -58,16 +58,11 @@ public class PdfGenerator {
         table.addCell(cell);
         // Iterating the list of students
         for (Movie movie: movieList) {
-            // Adding student id
             table.addCell(String.valueOf(movie.getId()));
-            // Adding student name
             table.addCell(movie.getName());
-            // Adding student email
             table.addCell(movie.getGenera());
-            // Adding student mobile
             table.addCell(movie.getReleaseDate().toString());
         }
-        // Adding the created table to the document
         document.add(table);
         // Closing the document
         document.close();
